@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200;
+  }
+}
+
+/* Table Dark Mode */
+.dark table {
+  @apply text-gray-100;
+}
+
+.dark thead {
+  @apply bg-gray-800;
+}
+
+.dark thead th {
+  @apply text-gray-100 border-gray-700;
+}
+
+.dark tbody {
+  @apply bg-gray-800;
+}
+
+.dark tbody tr {
+  @apply border-gray-700;
+}
+
+.dark tbody tr:hover {
+  @apply bg-gray-700;
+}
+
+.dark td {
+  @apply border-gray-700;
+}
+
+/* Tremor Dark Mode Overrides */
+.dark .tremor-Card-root {
+  @apply bg-gray-800 text-white rounded-xl;
+}
+
+.dark .tremor-Title-text {
+  @apply text-white;
+}
+
+.dark .tremor-Text-text {
+  @apply text-gray-300;
+}
+
+.dark .tremor-TabList-root {
+  @apply text-white;
+}
+
+.dark .tremor-Tab-root {
+  @apply text-gray-300;
+}
+
+.dark .tremor-Tab-root[data-headlessui-state="selected"] {
+  @apply text-white border-blue-500;
+}
+
+.dark .tremor-Legend-root {
+  @apply text-gray-300;
+}
+
+.dark .tremor-BarChart-bar {
+  @apply fill-blue-500;
+}
+
+.dark .tremor-AreaChart-path {
+  @apply stroke-blue-500;
+}
+
+.dark .tremor-DonutChart-path {
+  @apply stroke-current;
+}
+
+/* Performance Optimizations */
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .transition-gpu {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
